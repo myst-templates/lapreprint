@@ -40,14 +40,14 @@ doc:
   - id: keywords
 options:
   - id: theme_color
-    type: string
+    type: choice
     description: Choose between `blue` and `red` color scheme. Defaults to `blue`.
     default: blue
     choices:
       - blue
       - red
   - id: line_spacing
-    type: string
+    type: choice
     description: Use the onehalfspacing or doublespacing option for 1.5/2.0 line spacing.
     default: single
     choices:
@@ -55,7 +55,7 @@ options:
       - onehalfspacing
       - doublespacing
   - id: venue_footer
-    type: string
+    type: choice
     description: Show a label of the venue, like "arXiv" in the footer of each page.
     default: preprint
     choices:
