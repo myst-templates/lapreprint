@@ -8,7 +8,7 @@
 
 ## Usage
 
-Install [MyST Markdown](https://myst.tools/docs/mystjs/quickstart), and then add some frontmatter:
+Install [MyST Markdown](https://myst-tools.org/docs/mystjs/quickstart), and then add some frontmatter:
 
 ```yaml
 ---
@@ -32,4 +32,4 @@ To build your PDF:
 myst build --pdf
 ```
 
-See [MyST Guide for creating Documents](https://myst.tools/docs/mystjs/quickstart-myst-documents) for full instructions.
+See [MyST Guide for creating Documents](https://myst-tools.org/docs/mystjs/quickstart-myst-documents) for full instructions.
