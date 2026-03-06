@@ -10,6 +10,15 @@
 %%% PREAMBLE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% Enable PDF accessibility tagging (PDF/UA-2) via the LaTeX Tagging Project.
+% Requires LuaLaTeX and TeX Live 2025+.
+% See https://latex3.github.io/tagging-project/documentation/usage-instructions
+\DocumentMetadata{
+  tagging=on,
+  lang=en,
+  pdfstandard=ua-2,
+}
+
 % Declare document class
 \documentclass[9pt
 [#- if options.venue_footer == "biorxiv" #],biorxiv[# endif -#]
