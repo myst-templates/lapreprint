@@ -12,11 +12,23 @@
 
 % Enable PDF accessibility tagging (PDF/UA-2) via the LaTeX Tagging Project.
 % Requires LuaLaTeX and TeX Live 2025+.
-% See https://latex3.github.io/tagging-project/documentation/usage-instructions
+% See
+% https://latex3.github.io/tagging-project/documentation/usage-instructions
+% https://github.com/rhstanton/accessible_LaTeX/blob/main/accessible_article.tex
 \DocumentMetadata{
-  tagging=on,
   lang=en,
+  pdfstandard=a-2u, % PDF/A-2u format (archival standard with Unicode support)
+  pdfstandard=ua-1, % Add PDF/UA-1 accessibility conformance target
   pdfstandard=ua-2,
+  pdfversion=1.7,   % Explicit PDF version used for compatibility with conformance tooling
+  testphase = {phase-III, table},
+  tagging=on,
+  tagging-setup={
+    math/alt/use,  % Keep math accessibility enabled (screen readers get tagged math)
+    math/mathml/AF=false, % Do not embed MathML as PDF Associated Files (helps some strict conformance checkers)
+    math/tex/AF=false,    % Do not embed TeX source as Associated Files
+    math/mathml/sources=  % Clear MathML source attachment list (avoid extra embedded helper files)
+  }
 }
 
 % Declare document class
@@ -58,6 +70,29 @@
 \usepackage{multirow}
 \usepackage{snotez}     % For sidenote environments. enotez for endnotes
 \usepackage{csquotes}   % For language-based quote rules (helps BiBLaTeX)
+\usepackage{unicode-math} % Unicode math fonts (provides \setmathfont + automatic MathML)
+\usepackage{xcolor}     % Color support (needed for accessibility-friendly colors)
+
+% ======================================================================
+% HYPERLINK CONFIGURATION
+% ======================================================================
+% Links should be both colored AND underlined for accessibility
+% Color alone is not sufficient (fails WCAG guidelines)
+
+\usepackage{url,hyperref}
+\urlstyle{same}  % URLs use the same font as surrounding text
+
+% Custom commands for underlined hyperlinks
+\newcommand{\hrefu}[2]{\href{#1}{\uline{#2}}}  % Hyperlink with underline
+\newcommand{\urlu}[1]{\uline{\url{#1}}}        % URL with underline
+
+% Set link colors (blue for consistency with heading color in slides)
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,   % Internal links (TOC, references)
+  urlcolor=blue,    % External URLs
+  citecolor=blue    % Citations
+}
 
 [-IMPORTS-]
 

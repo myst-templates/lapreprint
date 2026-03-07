@@ -307,7 +307,7 @@
    \setlength{\parindent}{0pt}\raggedright
    \textcolor{MediumGrey}{\rule{\textwidth}{2pt}}
    \vskip16pt
-   \textcolor{lightColour}{\large\bfseries\abstractname\space}
+   \textcolor{darkColour}{\large\bfseries\abstractname\space}
 
    % Here we squeeze in the margin metadata
    \marginpar{\raggedright\footnotesize\themetadata\par}
@@ -539,7 +539,7 @@
   allcolors=black,
   citecolor=MediumGrey,
   linkcolor=MediumGrey,
-  urlcolor=lightColour,
+  urlcolor=darkColour,
   hypertexnames=false}
 \urlstyle{sf}
 
