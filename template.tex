@@ -21,7 +21,6 @@
   pdfstandard=ua-1, % Add PDF/UA-1 accessibility conformance target
   pdfstandard=ua-2,
   pdfversion=1.7,   % Explicit PDF version used for compatibility with conformance tooling
-  testphase = {phase-III, table},
   tagging=on,
   tagging-setup={
     math/alt/use,  % Keep math accessibility enabled (screen readers get tagged math)
@@ -72,6 +71,8 @@
 \usepackage{csquotes}   % For language-based quote rules (helps BiBLaTeX)
 \usepackage{unicode-math} % Unicode math fonts (provides \setmathfont + automatic MathML)
 \usepackage{xcolor}     % Color support (needed for accessibility-friendly colors)
+\usepackage{float}      % Provides \floatplacement
+\floatplacement{table}{htbp} % Restore here-preferring placement; tagging=on changes the default
 
 % ======================================================================
 % HYPERLINK CONFIGURATION
