@@ -125,3 +125,6 @@ packages:
   - unicode-math
   - wrapfig
   - xcolor
+
+build:
+  engine: -lualatex
