@@ -38,6 +38,7 @@ doc:
     required: true
   - id: bibliography
   - id: keywords
+  - id: affiliations
 options:
   - id: theme_color
     type: choice
@@ -89,6 +90,7 @@ packages:
   - enumitem
   - etoolbox
   - fancyhdr
+  - float
   - fontenc
   - gensymb
   - graphicx
@@ -123,6 +125,7 @@ packages:
   - textgreek
   - titlesec
   - unicode-math
+  - url
   - wrapfig
   - xcolor
 
