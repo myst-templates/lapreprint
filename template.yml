@@ -89,6 +89,7 @@ packages:
   - enumitem
   - etoolbox
   - fancyhdr
+  - float
   - fontenc
   - gensymb
   - graphicx
@@ -123,6 +124,7 @@ packages:
   - textgreek
   - titlesec
   - unicode-math
+  - url
   - wrapfig
   - xcolor
 
